@@ -40,7 +40,6 @@ public:
     uint16_t getStamina() const;
     uint16_t getCapacity() const;
     uint16_t getStrength() const;
-    uint16_t getDefence() const;
 
     const std::string &getName() const;
 
@@ -52,7 +51,6 @@ public:
     void setStamina(uint16_t stamina);
     void setCapacity(uint16_t capacity);
     void setStrength(uint16_t strength);
-    void setDefence(uint16_t defence);
 
     void setName(const std::string &name);
 };

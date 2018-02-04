@@ -10,7 +10,14 @@
 #include "Ai.h"
 
 class Npc : public Organism, public Ai{
-
+public:
+    Npc(uint16_t posX,
+        uint16_t posY,
+        uint16_t health_points,
+        uint16_t magic_points,
+        uint16_t shield_points,
+        uint16_t strength,
+        std::string name);
 };
 
 
