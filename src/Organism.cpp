@@ -4,6 +4,22 @@
 
 #include "../include/Organism.h"
 
+uint16_t Organism::getPosX() const {
+    return _posX;
+}
+
+void Organism::setPosX(uint16_t posX){
+    _posX = posX;
+}
+
+uint16_t Organism::getPosY() const {
+    return _posY;
+}
+
+void Organism::setPosY(uint16_t posY) {
+    _posY = posY;
+}
+
 uint16_t Organism::getHealth_points() const {
     return _health_points;
 }
@@ -42,4 +58,20 @@ uint16_t Organism::getCapacity() const {
 
 void Organism::setCapacity(uint16_t capacity) {
     _capacity = capacity;
+}
+
+uint16_t Organism::getStrength() const {
+    return _strength;
+}
+
+void Organism::setStrength(uint16_t strength) {
+    _strength = strength;
+}
+
+const std::string &Organism::getName() const {
+    return _name;
+}
+
+void Organism::setName(const std::string &name) {
+    _name = name;
 }

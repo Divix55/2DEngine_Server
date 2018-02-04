@@ -3,7 +3,7 @@ project(2DEngine_Server)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(2DEngine_Server src/main.cpp src/Organism.cpp include/Organism.h)
+add_executable(2DEngine_Server src/main.cpp src/Organism.cpp include/Organism.h src/Ai.cpp include/Ai.h src/Monster.cpp include/Monster.h src/Npc.cpp include/Npc.h)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")
 find_package(SFML REQUIRED system window graphics network audio)
