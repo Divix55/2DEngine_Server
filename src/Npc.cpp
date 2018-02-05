@@ -20,3 +20,7 @@ Npc::Npc(uint16_t posX,
 
     setName(name);
 }
+
+Npc::~Npc() {
+    delete this;
+}

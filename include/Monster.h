@@ -7,7 +7,10 @@
 
 #include "Organism.h"
 #include "Ai.h"
+#include "Organism_Lists.h"
+
 class Monster : public Organism, public Ai{
+    Monster_Type _monster_type;
 public:
     Monster(uint16_t posX,
             uint16_t posY,
@@ -15,9 +18,12 @@ public:
             uint16_t magic_points,
             uint16_t shield_points,
             uint16_t strength,
-            std::string name);
+            std::string name, Monster_Type monster_type);
 
     virtual ~Monster();
+
+    Monster_Type get_monster_type() const;
+    void set_monster_type(Monster_Type _monster_type);
 };
 
 
