@@ -4,6 +4,10 @@
 
 #include "../include/Organism.h"
 
+void Organism::draw(sf::RenderTarget& target, sf::RenderStates states) const{
+    target.draw(_actual_sprite);
+}
+
 uint16_t Organism::getPosX() const {
     return _posX;
 }
@@ -74,4 +78,20 @@ const std::string &Organism::getName() const {
 
 void Organism::setName(const std::string &name) {
     _name = name;
+}
+
+const std::string &Organism::getFileName() const {
+    return _file_name;
+}
+
+void Organism::setFileName(const std::string &name) {
+    _file_name = name;
+}
+
+const sf::Sprite &Organism::get_actual_sprite() const {
+    return _actual_sprite;
+}
+
+void Organism::set_actual_sprite(const sf::Sprite &_actual_sprite) {
+    Organism::_actual_sprite = _actual_sprite;
 }

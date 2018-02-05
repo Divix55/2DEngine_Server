@@ -20,7 +20,7 @@ Monster::Monster(uint16_t posX,
     setStrength(strength);
 
     setName(name);
-    set_monster_type(Monster_Type::none);
+    set_monster_type(monster_type);
 }
 
 Monster::~Monster() {

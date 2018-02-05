@@ -9,11 +9,20 @@
 #include <SFML/System.hpp>
 
 class Control {
+    bool _standing
+
 public:
-    Control();
+    Control(): _standing{true} {}
     virtual ~Control() {};
 
     void action_character(sf::Keyboard::Key key_button);
+    void move_up();
+    void move_down();
+    void move_right();
+    void move_left();
+
+    bool is_standing() const;
+    void set_standing(bool _standing);
 };
 
 

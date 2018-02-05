@@ -10,6 +10,7 @@ class Ai {
 public:
     Ai() {};
     virtual ~Ai() {};
+    //TODO: obsluga interakcji z graczem
 };
 
 
