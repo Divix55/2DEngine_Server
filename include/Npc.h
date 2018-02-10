@@ -22,6 +22,7 @@ public:
         uint16_t shield_points,
         uint16_t strength,
         std::string name,
+        std::string file_name,
         Npc_Type npc);
     virtual ~Npc();
 

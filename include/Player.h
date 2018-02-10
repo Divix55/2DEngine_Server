@@ -13,7 +13,14 @@
 class Player: public Organism, public Control {
     Profession _profession;
 public:
-    Player() : _profession{Profession ::none} {};
+    Player(uint16_t posX,
+           uint16_t posY,
+           uint16_t health_points,
+           uint16_t magic_points,
+           uint16_t shield_points,
+           uint16_t strength,
+           std::string name,
+           std::string file_name);
     virtual ~Player();
 
     Profession get_profession() const;

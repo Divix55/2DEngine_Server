@@ -12,7 +12,7 @@ public:
     World(sf::RenderWindow& window);
     virtual ~World();
 
-    void update();
+    void update(sf::Clock game_time);
     void draw();
 };
 

@@ -4,6 +4,20 @@
 
 #include "../include/Player.h"
 
+Player::Player(uint16_t posX, uint16_t posY, uint16_t health_points, uint16_t magic_points, uint16_t shield_points,
+               uint16_t strength, std::string name, std::string file_name) {
+    setPosX(posX);
+    setPosY(posY);
+    setHealth_points(health_points);
+    setMagic_points(magic_points);
+    setShield_points(shield_points);
+    setStrength(strength);
+    setName(name);
+    setFileName(file_name);
+    set_profession(Profession::none);
+
+}
+
 Player::~Player() {
     delete this;
 }

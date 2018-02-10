@@ -18,7 +18,9 @@ public:
             uint16_t magic_points,
             uint16_t shield_points,
             uint16_t strength,
-            std::string name, Monster_Type monster_type);
+            std::string name,
+            std::string file_name,
+            Monster_Type monster_type);
 
     virtual ~Monster();
 

@@ -4,9 +4,9 @@
 
 #include "../include/Organism.h"
 
-void Organism::draw(sf::RenderTarget& target, sf::RenderStates states) const{
-    target.draw(_actual_sprite);
-}
+//void Organism::draw(sf::RenderTarget& target, sf::RenderStates states) const{
+//    target.draw(_actual_sprite);
+//}
 
 uint16_t Organism::getPosX() const {
     return _posX;

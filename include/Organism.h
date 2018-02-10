@@ -13,7 +13,7 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 
-class Organism: public sf::Drawable{
+class Organism/*: public sf::Drawable*/{
     uint16_t _posX, _posY;
     uint16_t _health_points;        //0 - 65535 for all uint16_t
     uint16_t _magic_points;
@@ -26,9 +26,10 @@ class Organism: public sf::Drawable{
     std::string _file_name;
 
     sf::Texture _texture;
-    sf::Sprite _actual_sprite;
+public:
+    sf::Sprite _actual_sprite;      //FIXME: delete this
 
-    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+    //virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 public:
     std::vector<sf::Sprite> sprite_list;
@@ -42,11 +43,10 @@ public:
                  _strength{0},
                  _name{"emptyOrg"},
                  _file_name{"emptyOrg"} {
-        if(!_texture.loadFromFile(_file_name+".png")){
+        /*if(!_texture.loadFromFile(_file_name)){
             std::cout<<"Error with "<<_file_name<<" texture loading."<<std::endl;
         }
         else{
-            _actual_sprite.setTextureRect(sf::IntRect(0, 0, SEGMENT, SEGMENT));
             for(int i=0; i<4; i++){
                 for(int j=0; j<3; j++){
                     sf::Sprite tmp;
@@ -54,7 +54,7 @@ public:
                     sprite_list.push_back(tmp);
                 }
             }
-        }
+        }*/
 
     };
     virtual ~Organism() {};

@@ -25,34 +25,17 @@ void Control::action_character(sf::Keyboard::Key key_button){
 }
 
 void Control::move_up() {
-    _standing = false;
     //TODO: move up
-
-    _standing = true;
 }
 
 void Control::move_down() {
-    _standing = false;
     //TODO: move down
-    _standing = true;
 }
 
 void Control::move_right() {
-    _standing = false;
     //TODO: move right
-    _standing = true;
 }
 
 void Control::move_left() {
-    _standing = false;
     //TODO: move left
-    _standing = true;
-}
-
-bool Control::is_standing() const {
-    return _standing;
-}
-
-void Control::set_standing(bool _standing) {
-    Control::_standing = _standing;
 }

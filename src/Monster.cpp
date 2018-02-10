@@ -11,6 +11,7 @@ Monster::Monster(uint16_t posX,
                  uint16_t shield_points,
                  uint16_t strength,
                  std::string name,
+                 std::string file_name,
                  Monster_Type monster_type) {
     setPosX(posX);
     setPosY(posY);
@@ -20,6 +21,7 @@ Monster::Monster(uint16_t posX,
     setStrength(strength);
 
     setName(name);
+    setFileName(file_name);
     set_monster_type(monster_type);
 }
 
