@@ -8,12 +8,13 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 class World {
+    //file
 public:
     World(sf::RenderWindow& window);
     virtual ~World();
 
     void update(sf::Clock game_time);
-    void draw();
+    void draw(sf::RenderWindow& window);
 };
 
 

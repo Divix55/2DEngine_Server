@@ -43,7 +43,7 @@ public:
                  _strength{0},
                  _name{"emptyOrg"},
                  _file_name{"emptyOrg"} {
-        /*if(!_texture.loadFromFile(_file_name)){
+        if(!_texture.loadFromFile("/img/"+_file_name)){
             std::cout<<"Error with "<<_file_name<<" texture loading."<<std::endl;
         }
         else{
@@ -54,7 +54,7 @@ public:
                     sprite_list.push_back(tmp);
                 }
             }
-        }*/
+        }
 
     };
     virtual ~Organism() {};

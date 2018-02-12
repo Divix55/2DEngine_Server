@@ -18,7 +18,7 @@ void World::update(sf::Clock game_time) {
     }
 }
 
-void World::draw() {
+void World::draw(sf::RenderWindow& window) {
 
 }
 
