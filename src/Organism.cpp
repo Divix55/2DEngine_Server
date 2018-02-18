@@ -95,3 +95,18 @@ const sf::Sprite &Organism::get_actual_sprite() const {
 void Organism::set_actual_sprite(const sf::Sprite &_actual_sprite) {
     Organism::_actual_sprite = _actual_sprite;
 }
+
+void Organism::setFileSprite(std::string file_name) {
+    if(!_texture.loadFromFile("/img/"+_file_name)){
+        std::cout<<"Error with "<<_file_name<<" texture loading."<<std::endl;
+    }
+    else{
+        for(int i=0; i<4; i++){
+            for(int j=0; j<3; j++){
+                sf::Sprite tmp;
+                tmp.setTextureRect(sf::IntRect(j*SEGMENT,i*SEGMENT, SEGMENT, SEGMENT));
+                sprite_list.push_back(tmp);
+            }
+        }
+    }
+}

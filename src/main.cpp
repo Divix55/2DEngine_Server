@@ -24,7 +24,6 @@ int main() {
 
         game_window.clear();
         newWorld->update(game_time);
-        //TODO: rysowanie wszystkiego
         game_window.display();
     }
     return 0;

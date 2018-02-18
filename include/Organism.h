@@ -42,21 +42,7 @@ public:
                  _capacity{0},
                  _strength{0},
                  _name{"emptyOrg"},
-                 _file_name{"emptyOrg"} {
-        if(!_texture.loadFromFile("/img/"+_file_name)){
-            std::cout<<"Error with "<<_file_name<<" texture loading."<<std::endl;
-        }
-        else{
-            for(int i=0; i<4; i++){
-                for(int j=0; j<3; j++){
-                    sf::Sprite tmp;
-                    tmp.setTextureRect(sf::IntRect(j*SEGMENT,i*SEGMENT, SEGMENT, SEGMENT));
-                    sprite_list.push_back(tmp);
-                }
-            }
-        }
-
-    };
+                 _file_name{"emptyOrg"} {};
     virtual ~Organism() {};
 
     uint16_t getPosX() const;
@@ -86,6 +72,7 @@ public:
     void setFileName(const std::string &name);
 
     void set_actual_sprite(const sf::Sprite &_actual_sprite);
+    void setFileSprite(std::string file_name);
 };
 
 

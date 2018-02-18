@@ -15,7 +15,7 @@ Player::Player(uint16_t posX, uint16_t posY, uint16_t health_points, uint16_t ma
     setName(name);
     setFileName(file_name);
     set_profession(Profession::none);
-
+    setFileSprite(file_name);
 }
 
 Player::~Player() {
