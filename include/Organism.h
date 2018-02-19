@@ -5,7 +5,7 @@
 #ifndef INC_2DENGINE_SERVER_ORGANISM_H
 #define INC_2DENGINE_SERVER_ORGANISM_H
 
-#define SEGMENT 32
+#define SEGMENT 64
 
 #include <iostream>
 #include <cstdint>

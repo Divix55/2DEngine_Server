@@ -19,7 +19,7 @@ Player::Player(uint16_t posX, uint16_t posY, uint16_t health_points, uint16_t ma
 }
 
 Player::~Player() {
-    delete this;
+    //delete this;
 }
 
 Profession Player::get_profession() const {
