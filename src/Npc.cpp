@@ -41,16 +41,7 @@ void Npc::set_npc(Npc_Type _npc) {
 void Npc::move_npc() {
     if(!get_isTalking()){
         int random = rand()%4+1;
-        switch(random){
-            case 1:
-                move_up();
-            case 2:
-                move_right();
-            case 3:
-                move_down();
-            default:
-                move_left();
-        }
+        //change random to key
     }
 }
 

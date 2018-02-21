@@ -22,7 +22,7 @@ int main() {
             }
             //---------------
             if(event.type == sf::Event::KeyPressed){
-                new_player.action_character(event.key.code);
+                new_player.moveChar(event.key.code, new_player);
             }
             //---------------
             newWorld.eventCheck(event);
@@ -31,7 +31,9 @@ int main() {
         game_window.clear();
         newWorld.update(game_time, game_window);
 
+        new_player._actual_sprite.setPosition(new_player.getPosX(), new_player.getPosY());
         game_window.draw(new_player.get_actual_sprite());
+
 
         game_window.display();
     }

@@ -8,10 +8,10 @@
 
 #include "Organism.h"
 #include "Ai.h"
-#include "Organism_Lists.h"
-#include "Control.h"
+#include "Enum_Lists.h"
+#include "ControlAnim.h"
 
-class Npc : public Organism, public Ai, public Control{
+class Npc : public Organism, public Ai, public ControlAnim{
     bool _isTalking;
     Npc_Type _npc;
 public:

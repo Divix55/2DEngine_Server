@@ -14,7 +14,7 @@ add_executable(2DEngine_Server
         src/Npc.cpp
         include/Npc.h
         src/Player.cpp
-        include/Player.h src/Control.cpp include/Control.h include/Organism_Lists.h src/World.cpp include/World.h src/Level.cpp include/Level.h src/Player_Manager.cpp include/Player_Manager.h)
+        include/Player.h src/ControlAnim.cpp include/ControlAnim.h include/Enum_Lists.h src/World.cpp include/World.h src/Level.cpp include/Level.h src/Player_Manager.cpp include/Player_Manager.h)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")
 find_package(SFML REQUIRED system window graphics network audio)

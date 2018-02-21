@@ -14,6 +14,7 @@
 #include <SFML/Graphics.hpp>
 
 class Organism/*: public sf::Drawable*/{
+
     uint16_t _posX, _posY;
     uint16_t _health_points;        //0 - 65535 for all uint16_t
     uint16_t _magic_points;

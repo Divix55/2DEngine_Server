@@ -11,4 +11,6 @@ enum class Monster_Type{ none, monster1, monster2};
 
 enum class Npc_Type{ none, npc1, npc2};
 
+enum class Direction{none, up, right, down, left };
+
 #endif //INC_2DENGINE_SERVER_PROFESSION_H

@@ -21,7 +21,7 @@ void World::update(sf::Clock game_time, sf::RenderWindow& window) {
 void World::eventCheck(sf::Event& event) {
     if(event.type == sf::Event::KeyPressed){
         for(auto player: playerManager.getPlayerList()){
-            player->action_character(event.key.code);
+            player->moveChar(event.key.code, *player);
         }
     }
 }

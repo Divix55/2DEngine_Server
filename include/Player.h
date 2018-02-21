@@ -5,12 +5,11 @@
 #ifndef INC_2DENGINE_SERVER_PLAYER_H
 #define INC_2DENGINE_SERVER_PLAYER_H
 
-
 #include "Organism.h"
-#include "Control.h"
-#include "Organism_Lists.h"
+#include "ControlAnim.h"
+#include "Enum_Lists.h"
 
-class Player: public Organism, public Control {
+class Player: public Organism, public ControlAnim {
     Profession _profession;
 public:
     Player(uint16_t posX,

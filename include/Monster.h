@@ -6,10 +6,10 @@
 #define INC_2DENGINE_SERVER_MONSTER_H
 
 #include "Organism.h"
-#include "Organism_Lists.h"
-#include "Control.h"
+#include "Enum_Lists.h"
+#include "ControlAnim.h"
 
-class Monster : public Organism, public Control{
+class Monster : public Organism, public ControlAnim{
     Monster_Type _monster_type;
 public:
     Monster(uint16_t posX,
