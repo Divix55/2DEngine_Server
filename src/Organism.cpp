@@ -110,5 +110,6 @@ void Organism::setFileSprite(std::string file_name) {
             }
         }
         set_actual_sprite(sprite_list[0]);
+
     }
 }

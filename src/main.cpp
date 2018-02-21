@@ -2,14 +2,11 @@
 #include <SFML/Network.hpp>
 #include <SFML/Window.hpp>
 #include "../include/World.h"
-#include "../include/Player.h"
 
 int main() {
-    std::cout<<"Tworze swiat gry: "<<std::endl;
-    sf::RenderWindow game_window(sf::VideoMode(800,600), "2DEngine");
-    //World* newWorld = new World(game_window);
+    std::cerr<<"Tworze swiat gry: "<<std::endl;
+    /*sf::RenderWindow game_window(sf::VideoMode(800,600), "2DEngine");
     World newWorld;
-    //Player* new_player = new Player(10, 10, 100, 50, 0, 10, "Divix", "player.png");
     Player new_player{10, 10, 100, 50, 0, 10, "Divix", "player.png"};
     //TODO: wyrzucic stad player i dodac obsluge listy graczy
     while(game_window.isOpen()) {
@@ -36,6 +33,16 @@ int main() {
 
 
         game_window.display();
+    }*/
+    World world;
+    std::cerr<<"Otwieram petle gry i rysuje swiat"<<std::endl;
+    while(world.window.isOpen()){
+        sf::Clock game_time;
+        sf::Event event;
+        world.eventCheck(event);
+        world.window.clear();
+        world.draw();
+        world.window.display();
     }
     return 0;
 }

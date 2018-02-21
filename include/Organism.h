@@ -28,9 +28,8 @@ class Organism/*: public sf::Drawable*/{
 
     sf::Texture _texture;
 public:
-    sf::Sprite _actual_sprite;      //FIXME: delete this
+    sf::Sprite _actual_sprite;
 
-    //virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 public:
     std::vector<sf::Sprite> sprite_list;
@@ -44,7 +43,7 @@ public:
                  _strength{0},
                  _name{"emptyOrg"},
                  _file_name{"emptyOrg"} {};
-    virtual ~Organism() {};
+    virtual ~Organism() = default;
 
     uint16_t getPosX() const;
     uint16_t getPosY() const;
@@ -74,6 +73,7 @@ public:
 
     void set_actual_sprite(const sf::Sprite &_actual_sprite);
     void setFileSprite(std::string file_name);
+
 };
 
 

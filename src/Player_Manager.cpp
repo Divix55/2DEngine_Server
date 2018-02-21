@@ -5,6 +5,7 @@
 #include "../include/Player_Manager.h"
 
 void Player_Manager::addPlayer(Player& player) {
+    player.incPlayer_id();
     playerList.push_back(&player);
 }
 

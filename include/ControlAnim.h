@@ -11,13 +11,13 @@
 #include "Enum_Lists.h"
 
 class ControlAnim {
-
+    sf::RenderWindow window;
 public:
-    ControlAnim() {};
-    virtual ~ControlAnim() {};
+    ControlAnim() = default;
+    virtual ~ControlAnim() = default;
 
     void moveChar(sf::Keyboard::Key key_button, Organism& me);
-    void animate(Direction direction);
+    void animate(Direction direction, Organism& me);
 };
 
 

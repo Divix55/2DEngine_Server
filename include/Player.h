@@ -10,6 +10,7 @@
 #include "Enum_Lists.h"
 
 class Player: public Organism, public ControlAnim {
+    uint16_t player_id;
     Profession _profession;
 public:
     Player(uint16_t posX,
@@ -24,6 +25,9 @@ public:
 
     Profession get_profession() const;
     void set_profession(Profession _profession);
+
+    uint16_t getPlayer_id() const;
+    void incPlayer_id();
 };
 
 

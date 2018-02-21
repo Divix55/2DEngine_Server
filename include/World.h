@@ -10,13 +10,16 @@
 
 class World {
     Player_Manager playerManager;
+
+    Player new_player{10, 10, 100, 50, 0, 10, "Divix", "player.png"};
 public:
+    sf::RenderWindow window;
     World();
     virtual ~World();
 
-    void update(sf::Clock game_time, sf::RenderWindow& window);
+    void update(sf::Clock game_time);
     void eventCheck(sf::Event& event);
-    void draw(sf::RenderWindow& window);
+    void draw();
 };
 
 

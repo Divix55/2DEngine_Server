@@ -6,22 +6,22 @@
 #include "../include/ControlAnim.h"
 
 void ControlAnim::moveChar(sf::Keyboard::Key key_button, Organism& me){
-    const static uint16_t movement = 10;
+    const static uint16_t movement = 8;
     if(key_button == sf::Keyboard::Up){
         me.setPosY(me.getPosY()-movement);
-        animate(Direction::up);
+        animate(Direction::up, me);
     }
     else if(key_button == sf::Keyboard::Right){
         me.setPosX(me.getPosX()+movement);
-        animate(Direction::right);
+        animate(Direction::right, me);
     }
     else if(key_button == sf::Keyboard::Down){
         me.setPosY(me.getPosY()+movement);
-        animate(Direction::down);
+        animate(Direction::down, me);
     }
     else if(key_button == sf::Keyboard::Left){
         me.setPosX(me.getPosX()-movement);
-        animate(Direction::left);
+        animate(Direction::left, me);
     }
     else if(key_button == sf::Keyboard::Return){
         //TODO: type in game global communicator
@@ -31,7 +31,7 @@ void ControlAnim::moveChar(sf::Keyboard::Key key_button, Organism& me){
 
 }
 
-void ControlAnim::animate(Direction direction) {
+void ControlAnim::animate(Direction direction, Organism& me) {
     if(direction == Direction::up){
 
     }
